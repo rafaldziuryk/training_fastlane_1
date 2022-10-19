@@ -1,0 +1,11 @@
+lane :format do
+  flutter(args: %w(format --set-exit-if-changed . --line-length=120))
+end
+
+lane :analyze do
+  flutter(args: %w(analyze .))
+end
+
+lane :test do
+    flutter(args: %w(doctor))
+end
